@@ -20,8 +20,8 @@ public class EmailApp {
         System.out.println("\nObservers registered: " + emailSystem.getObserverCount());
 
         // Simulate receiving emails
-        emailSystem.receiveEmail("boss@company.com", "Meeting at 3 PM today");
-        emailSystem.receiveEmail("friend@gmail.com", "Want to grab lunch?");
+        emailSystem.receiveEmail("boss@company.com", "Meeting at 3 PM today", true);
+        emailSystem.receiveEmail("friend@gmail.com", "Want to grab lunch?", false);
 
         System.out.println("\n=== Results ===");
         System.out.println("Total unread: " + counter.getCount());

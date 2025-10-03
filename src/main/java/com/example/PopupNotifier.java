@@ -6,8 +6,9 @@ package com.example;
 public class PopupNotifier implements Observer {
 
     @Override
-    public void update(String sender, String message) {
-        System.out.println("🔔 POPUP: New email from " + sender);
+    public void update(String sender, String message, boolean isUrgent) {
+        String priority = isUrgent ? "🔴 URGENT" : "🟡 NORMAL";
+        System.out.println("🔔 POPUP " + priority + ": New email from " + sender);
         System.out.println("   Message: " + message.substring(0, Math.min(30, message.length())) + "...");
     }
 
